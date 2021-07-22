@@ -17,6 +17,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+#define TAPPING_TERM 2000
 // #define USE_I2C
 #define EE_HANDS
-/* #define TAPPING_TERM 200 */
