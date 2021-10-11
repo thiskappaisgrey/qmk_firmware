@@ -1,6 +1,14 @@
 #include QMK_KEYBOARD_H
 
+#define H_A LALT_T(KC_A)
+#define H_S LCTL_T(KC_S)
+#define H_E LSFT_T(KC_E)
+#define H_T LGUI_T(KC_T)
 
+#define H_H RALT_T(KC_H)
+#define H_O RCTL_T(KC_O)
+#define H_I RSFT_T(KC_I)
+#define H_N RGUI_T(KC_N)
 enum layers {
  _NORMAN,
  _GAMING,
@@ -24,11 +32,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
      KC_TAB,  KC_Q,    KC_W,    KC_D,    KC_F,    KC_K,                               KC_J,    KC_U,    KC_R,    KC_L,    KC_SCLN, KC_BSLS,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-     LCTL_T(KC_ESC), KC_A,    KC_S,    KC_E,    KC_T,    KC_G,                        KC_Y,    KC_N,    KC_I,    KC_O,    KC_H,    KC_QUOT,
+     LCTL_T(KC_ESC), H_A,    H_S,    H_E,    H_T,    KC_G,                        KC_Y,    H_N,    H_I,    H_O,    H_H,    KC_QUOT,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,   LSFT_T(KC_ENT),    KC_DEL,  KC_P,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
+     _______, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,   LSFT_T(KC_ENT),    KC_DEL,  KC_P,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, _______,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
-                                      NUM, LGUI_T(KC_SPC),   LSFT_T(KC_ENT),     LT(_NAV, KC_BSPC),  RGUI_T(KC_SPC),  KC_RALT
+                                      NUM, KC_SPC,   LSFT_T(KC_ENT),     LT(_NAV, KC_BSPC),  KC_SPC,  KC_RALT
                                 // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
   ),
 
@@ -140,3 +148,13 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
     }
     return true;
 }
+
+/* uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) { */
+/*     switch (keycode) { */
+/*         case RGUI_T(KC_SPC): */
+/*         case LGUI_T(KC_SPC): */
+/*             return TAPPING_TERM + 10000; */
+/*         default: */
+/*             return TAPPING_TERM; */
+/*     } */
+/* } */
