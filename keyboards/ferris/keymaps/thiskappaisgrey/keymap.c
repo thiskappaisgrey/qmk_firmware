@@ -49,6 +49,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_RAISE] = LAYOUT( /* QWERTY */
     _______, KC_MUTE, _______, KC_MPLY, _______,       _______, _______, _______, _______, _______,
     RESET, _______, _______, _______, _______,       KC_BACKSLASH, KC_P, _______, _______, _______,
+
     _______, _______, _______, KC_PSCR, _______,       _______, _______, _______, _______, _______,
                                     OSL(_NUM), KC_ENT, KC_QUOTE, KC_TAB
   ),
